@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Platform | Learn & Grow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Moderustic:wght@300..800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #53de62;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #029d72;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #ff3538;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #53de62;
+        }
+        
+        
+        /* Hero Section */
+        .hero {
+            background: white;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 600px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            z-index: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            z-index: 1;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #029d72;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #53de62;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ff3538;
+        }
+        
+        .features-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .feature-box {
+            flex-basis: calc(33.333% - 30px);
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            /* transform: translateY(-10px); */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff3538;
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Courses Section */
+        .courses {
+            background-color: #061b2a;
+        }
+        .section-title{
+            color: white;
+        }
+        
+        .courses-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+        
+        .course-card {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .course-desc {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .course-price {
+            font-weight: bold;
+            color: #ff3538;
+            font-size: 1.2rem;
+        }
+        
+        .course-btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background:#554dd1;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: #f5f4f6;
+            text-align: center;
+        }
+        .testimonials-heading{
+            color: black;
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: "\201C";
+            font-size: 80px;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            color: #ff3538;
+            opacity: 0.1;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .about-image {
+            flex: 1;
+            margin-right: 50px;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f9f9f9;
+        }
+        .contact-title{
+            color: black;
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-right: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #ff3538;
+            margin-right: 15px;
+            min-width: 25px;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: #666;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            padding: 50px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .social-proof h3 {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-item {
+            max-width: 150px;
+            margin: 15px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .logo-item:hover {
+            opacity: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #061b2a;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-col h4:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #ff3538;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff3538;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff3538;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid white;
+            margin-top: 30px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text, .hero-image {
+                padding: 30px 0;
+            }
+            
+            .feature-box, .course-card {
+                flex-basis: calc(50% - 20px);
+            }
+            
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-form {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+            
+            .feature-box, .course-card {
+                flex-basis: 100%;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Course<span>Academy</span></a>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Master Your <span>Business Growth</span> in Record Time</h1>
+                    <p>Discover my proven 6-step formula to scale your business, increase profits, and achieve the freedom you deserve. Join over 10,000+ entrepreneurs who transformed their businesses.</p>
+                    <a href="#courses" class="btn">Explore Courses</a>
+                </div>
+                <div class="hero-image">
+                    <img src="/api/placeholder/500/600" alt="Course Instructor">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h3>Featured In</h3>
+            <div class="logos">
+                <img class="logo-item" src="/api/placeholder/150/50" alt="Forbes">
+                <img class="logo-item" src="/api/placeholder/150/50" alt="Business Insider">
+                <img class="logo-item" src="/api/placeholder/150/50" alt="Entrepreneur">
+                <img class="logo-item" src="/api/placeholder/150/50" alt="Inc.">
+                <img class="logo-item" src="/api/placeholder/150/50" alt="CNBC">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">The 3-Step Growth Framework</h2>
+            <div class="features-container">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Scale Your Business</h3>
+                    <p>Learn proven strategies to scale your business operations efficiently without burning out or losing quality.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Maximize Profits</h3>
+                    <p>Implement systems that increase your profit margins and create sustainable revenue streams for long-term growth.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Gain Freedom</h3>
+                    <p>Build a business that works for you, not the other way around. Reclaim your time and enjoy true entrepreneurial freedom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            <div class="courses-container">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
+                    <div class="course-content">
+                        <h3 class="course-title">Business Scaling Masterclass</h3>
+                        <p class="course-desc">Learn the complete system to scale your business to 7 figures with proven strategies and frameworks.</p>
+                        <div class="course-footer">
+                            <span class="course-price">$997</span>
+                            <a href="course.html" class="btn course-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
+                    <div class="course-content">
+                        <h3 class="course-title">Profit Optimization Formula</h3>
+                        <p class="course-desc">Discover how to increase your profit margins by 2X while reducing operational costs and inefficiencies.</p>
+                        <div class="course-footer">
+                            <span class="course-price">$797</span>
+                            <a href="course.html" class="btn course-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
+                    <div class="course-content">
+                        <h3 class="course-title">Team Performance Accelerator</h3>
+                        <p class="course-desc">Build and manage high-performing teams that drive business growth and innovation.</p>
+                        <div class="course-footer">
+                            <span class="course-price">$597</span>
+                            <a href="course.html" class="btn course-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Get Access to Your Free 40-Minute Training Now!</h2>
+            <p>Learn the fundamental strategies that successful entrepreneurs use to scale their businesses and increase profits in this free training.</p>
+            <a href="#" class="btn">Join Free Training</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title testimonials-heading">What Our Students Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Implementing just one strategy from this course helped me double my business revenue in just 3 months. The framework is simple yet incredibly effective."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="/api/placeholder/100/100" alt="Testimonial Author">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Johnson</h4>
+                            <p>CEO, Tech Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="/api/placeholder/500/600" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <h2>About The Instructor</h2>
+                    <p>With over 15 years of experience in business growth and scaling, I've helped more than 500 businesses transform their operations and achieve exponential growth.</p>
+                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works across industries and business models.</p>
+                    <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build profitable businesses that also provide personal freedom.</p>
+                    <a href="#" class="btn">Learn More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="contact-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button class="btn">Send Message</button>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Business Avenue, Suite 500, San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@courseacademy.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9AM - 5PM (PST)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>CourseAcademy</h4>
+                    <p>Empowering entrepreneurs with the knowledge and tools to build successful, profitable businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Business Scaling</a></li>
+                        <li><a href="#">Profit Optimization</a></li>
+                        <li><a href="#">Team Performance</a></li>
+                        <li><a href="#">Marketing Mastery</a></li>
+                        <li><a href="#">Sales Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for business tips and growth strategies.</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address">
+                    </div>
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CourseAcademy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for navbar scrolling effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple form validation
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                
+                let isValid = true;
+                
+                if (!nameInput.value.trim()) {
+                    nameInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    nameInput.style.borderColor = '#ddd';
+                }
+                
+                if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+                    emailInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    emailInput.style.borderColor = '#ddd';
+                }
+                
+                if (!messageInput.value.trim()) {
+                    messageInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    messageInput.style.borderColor = '#ddd';
+                }
+                
+                if (isValid) {
+                    // Here you would normally send the form data to your server
+                    alert('Thank you for your message! We will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    alert('Please fill in all required fields correctly.');
+                }
+            });
+        }
+
+        // Testimonial slider (simple version)
+        let testimonialIndex = 0;
+        const testimonials = [
+            {
+                text: "Implementing just one strategy from this course helped me double my business revenue in just 3 months. The framework is simple yet incredibly effective.",
+                author: "Michael Johnson",
+                position: "CEO, Tech Solutions Inc.",
+                image: "/api/placeholder/100/100"
+            },
+            {
+                text: "This course changed the way I approach my business. I've gone from working 70+ hours a week to just 25, while increasing profits by 40%.",
+                author: "Sarah Williams",
+                position: "Founder, Creative Marketing Agency",
+                image: "/api/placeholder/100/100"
+            },
+            {
+                text: "The strategies taught in this program are gold. My company valuation has increased by 3x since implementing the scaling framework.",
+                author: "David Chen",
+                position: "Co-founder, E-commerce Solutions",
+                image: "/api/placeholder/100/100"
+            }
+        ];
+
+        function showTestimonial(index) {
+            const testimonialContainer = document.querySelector('.testimonial-container');
+            if (!testimonialContainer) return;
+            
+            const testimonial = testimonials[index];
+            
+            testimonialContainer.innerHTML = `
+                <div class="testimonial">
+                    <p class="testimonial-text">"${testimonial.text}"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="${testimonial.image}" alt="${testimonial.author}">
+                        </div>
+                        <div class="author-info">
+                            <h4>${testimonial.author}</h4>
+                            <p>${testimonial.position}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    ${testimonials.map((_, i) => 
+                        `<span class="dot ${i === index ? 'active' : ''}" onclick="showTestimonial(${i})"></span>`
+                    ).join('')}
+                </div>
+            `;
+        }
+
+        // Initialize and set up testimonial rotation
+        document.addEventListener('DOMContentLoaded', function() {
+            showTestimonial(0);
+            
+            // Auto-rotate testimonials every 5 seconds
+            setInterval(() => {
+                testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                showTestimonial(testimonialIndex);
+            }, 5000);
+            
+            // Add testimonial dot styling
+            const style = document.createElement('style');
+            style.textContent = `
+                .testimonial-dots {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+                .dot {
+                    height: 10px;
+                    width: 10px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                .dot.active {
+                    background-color: #ff3538;
+                }
+            `;
+            document.head.append(style);
+        });
+
+        // Countdown timer for limited-time offer (adds urgency)
+        function startCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            if (!countdownEl) return;
+            
+            // Set the countdown to 48 hours from now
+            const countDownDate = new Date();
+            countDownDate.setHours(countDownDate.getHours() + 48);
+            
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+                
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+                
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownEl.innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        }
+
+        // Initialize countdown if element exists
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+        });
+    </script>
+</body>
+</html>

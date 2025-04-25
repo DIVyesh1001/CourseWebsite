@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CourseAcademy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Moderustic:wght@300..800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #53de62;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #029d72;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #ff3538;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #53de62;
+        }
+        
+        .nav-links a.active {
+            color: #029d72;
+            font-weight: 600;
+        }
+        
+        
+        .login-btn:hover {
+            background-color: #ff3538;
+            color: white;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: white;
+            color: black;
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        .breadcrumb li {
+            margin: 0 10px;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: white;
+        }
+        
+        .breadcrumb .active {
+            color: white;
+        }
+        
+        /* Contact Info Section */
+        .contact-info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            flex-basis: calc(25% - 20px);
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-icon {
+            font-size: 2.5rem;
+            color: #ff3538;
+            margin-bottom: 20px;
+        }
+        
+        .info-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .info-card p, .info-card a {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .info-card a:hover {
+            color: #ff3538;
+        }
+        
+        /* Map Section */
+        .map-section {
+            position: relative;
+            height: 400px;
+            background-color: #f5f5f5;
+            margin-bottom: 80px;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e9e9e9;
+            color: #777;
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Form Section */
+        .contact-section {
+            background-color:#53de62;
+            padding: 80px 0;
+        }
+        
+        .contact-form-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .contact-form-content {
+            flex: 1;
+            padding: 50px;
+        }
+        
+        .contact-form-image {
+            flex: 1;
+            background-image: url('/api/placeholder/600/800');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+        
+        .section-subtitle {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .contact-content p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #ff3538;
+            box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .form-row .form-group {
+            flex-basis: calc(50% - 10px);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: #554dd1;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: #ff3538;
+        }
+        
+        .faq-question span {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-item.active .faq-question {
+            color: #ff3538;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 1000px;
+        }
+        
+        .faq-item.active .faq-question span {
+            transform: rotate(180deg);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #061b2a;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-col h4:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: #ff3538;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff3538;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff3538;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .info-card {
+                flex-basis: calc(50% - 20px);
+                margin-bottom: 20px;
+            }
+            
+            .contact-form-container {
+                flex-direction: column;
+            }
+            
+            .contact-form-image {
+                min-height: 300px;
+                order: -1;
+            }
+            
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .form-row .form-group {
+                flex-basis: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .info-card {
+                flex-basis: 100%;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Course<span>Academy</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Contact</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-info-cards">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>123 Business Avenue, Suite 500, San Francisco, CA 94107</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p><a href="mailto:info@courseacademy.com">info@courseacademy.com</a></p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Working Hours</h3>
+                    <p>Monday - Friday: 9AM - 5PM (PST)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="contact-form-content">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Have Questions? We're Here to Help!</h2>
+                    <div class="contact-content">
+                        <p>Fill out the form below, and one of our course advisors will get back to you within 24 hours. We're excited to hear from you!</p>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject">
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="course-inquiry">Course Inquiry</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="billing">Billing Questions</option>
+                                    <option value="partnerships">Partnership Opportunities</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" placeholder="Enter your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-form-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <span class="section-subtitle">Frequently Asked Questions</span>
+                <h2 class="section-title">Common Questions About Our Courses</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I access course materials after purchase? <span><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After purchasing a course, you'll receive login credentials via email. Simply sign in to your account on our platform, and you'll have immediate access to all course materials, including videos, workbooks, and bonus resources.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are there any prerequisites for your courses? <span><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our courses are designed for entrepreneurs at all levels. For beginners, we provide foundational knowledge, while more experienced business owners can skip ahead to advanced strategies. Some specialized courses may have specific prerequisites, which will be clearly mentioned in the course description.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer refunds if I'm not satisfied? <span><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we stand behind our courses with a 30-day satisfaction guarantee. If you're not completely satisfied with your purchase, simply contact our support team within 30 days, and we'll process a full refund, no questions asked.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long do I have access to the course? <span><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once you purchase a course, you'll have lifetime access to all course materials. This includes any future updates or additional content that may be added to the course over time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there any live support or coaching included? <span><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard courses include access to our private community forum where you can ask questions and get support. Premium courses and coaching programs include direct access to instructors through group coaching calls or one-on-one sessions, depending on the specific program.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>CourseAcademy</h4>
+                    <p>Empowering entrepreneurs with the knowledge and tools to build successful, profitable businesses.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Business Scaling</a></li>
+                        <li><a href="#">Profit Optimization</a></li>
+                        <li><a href="#">Team Performance</a></li>
+                        <li><a href="#">Marketing Mastery</a></li>
+                        <li><a href="#">Sales Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for business tips and growth strategies.</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email address">
+                    </div>
+                    <button class="btn">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CourseAcademy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Form Validation
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const messageInput = document.getElementById('message');
+                const subjectInput = document.getElementById('subject');
+                
+                let isValid = true;
+                
+                if (!nameInput.value.trim()) {
+                    nameInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    nameInput.style.borderColor = '#ddd';
+                }
+                
+                if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+                    emailInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    emailInput.style.borderColor = '#ddd';
+                }
+                
+                if (!subjectInput.value || subjectInput.value === "") {
+                    subjectInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    subjectInput.style.borderColor = '#ddd';
+                }
+                
+                if (!messageInput.value.trim()) {
+                    messageInput.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    messageInput.style.borderColor = '#ddd';
+                }
+                
+                if (isValid) {
+                    // Here you would normally send the form data to your server
+                    alert('Thank you for your message! We will get back to you within 24 hours.');
+                    contactForm.reset();
+                } else {
+                    alert('Please fill in all required fields correctly.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
