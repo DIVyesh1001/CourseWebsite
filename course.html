@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,15 @@
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Moderustic:wght@300..800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "DM Sans", sans-serif;;
+            font-family: "DM Sans", sans-serif;
+            ;
         }
+
         body {
             line-height: 1.6;
             color: #333;
@@ -21,49 +25,60 @@
             padding: 20px;
             background-color: #f8f9fa;
         }
+
         .container {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 30px;
         }
+
         .header {
             text-align: center;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
             margin-bottom: 30px;
         }
+
         h1 {
             color: #554dd1;
             margin-bottom: 10px;
         }
+
         .course-details {
             display: flex;
             margin-bottom: 30px;
         }
+
         .course-image {
             flex: 0 0 200px;
             margin-right: 30px;
         }
+
         .course-image img {
             width: 100%;
             border-radius: 5px;
         }
+
         .course-info {
             flex: 1;
         }
+
         .price {
             font-size: 24px;
             font-weight: bold;
             color: #53de62;
             margin: 15px 0;
         }
+
         .features {
             margin: 20px 0;
         }
+
         .features li {
             margin-bottom: 10px;
         }
+
         .checkout-btn {
             background-color: #53de62;
             color: white;
@@ -74,17 +89,20 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+        
         .checkout-btn:hover {
             background-color: #029d72;
         }
+        
         .footer {
             margin-top: 30px;
             text-align: center;
             font-size: 14px;
             color: #777;
         }
-    </style>
+        </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -97,31 +115,43 @@
                 <img src="/api/placeholder/400/300" alt="Course Cover">
             </div>
             <div class="course-info">
-                <h2>Web Development Masterclass</h2>
-                <p>Learn modern web development with HTML, CSS, JavaScript, and more. This comprehensive course will take you from beginner to professional.</p>
+                <h2>🎓 Live Amazon Launch Masterclass</h2>
+                <p>Get clarity, mindset shifts, and a battle-tested roadmap to build your brand from scratch.</p>
                 <div class="price">₹4,999</div>
+                <button id="pay-button" class="checkout-btn">Proceed to Payment</button>
                 <div class="features">
-                    <h3>This course includes:</h3>
+                    <h3>💻 Amazon FastTrack Digital Course (Self-Paced)</h3>
                     <ul>
-                        <li>50+ hours of video content</li>
-                        <li>Downloadable resources</li>
-                        <li>Certificate of completion</li>
-                        <li>Lifetime access</li>
-                        <li>30-day money-back guarantee</li>
+                        <li> Product Research</li>
+                        <li> Listing Creation</li>
+                        <li> Keyword & SEO Mastery</li>
+                        <li> Amazon Ads Made Easy</li>
+                        <li> Reviews & Ranking</li>
+                        <li> Order Management & Analytics</li>
+                        <li> Scaling & Automation</li>
                     </ul>
+                    <h4>🧰 Ready-to-Use Templates</h4>
+                    <ul>
+                        <li> Keyword Research Sheets</li>
+                        <li> Listing Copy Framework</li>
+                        <li> Ad Campaign Setup Sheets</li>
+                        <li> Profit Calculator</li>
+                    </ul>
+                    <h4>📞 Bonus: Live Q&A + Community Access</h4>
+                    <p>Get unstuck with real-time Q&A and stay accountable with our exclusive WhatsApp group for
+                        action-takers.</p>
                 </div>
             </div>
         </div>
-        
-        <button id="pay-button" class="checkout-btn">Proceed to Payment</button>
-        
+
+
         <div class="footer">
             <p>Secure payment powered by Razorpay</p>
         </div>
     </div>
 
     <script>
-        document.getElementById('pay-button').onclick = function() {
+        document.getElementById('pay-button').onclick = function () {
             var options = {
                 "key": "rzp_test_YOURKEYHERE", // Replace with your actual Razorpay Key ID
                 "amount": "499900", // Amount in paise (4999 INR)
@@ -129,7 +159,7 @@
                 "name": "Learning Academy",
                 "description": "Web Development Masterclass",
                 "image": "/api/placeholder/100/100", // Your company logo
-                "handler": function(response) {
+                "handler": function (response) {
                     alert("Payment successful! Payment ID: " + response.razorpay_payment_id);
                     // Here you would typically redirect to a success page or trigger enrollment
                     // window.location.href = "success.html?payment_id=" + response.razorpay_payment_id;
@@ -152,4 +182,5 @@
         };
     </script>
 </body>
+
 </html>

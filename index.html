@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,27 @@
     <style>
         /* Global Styles */
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Moderustic:wght@300..800&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "DM Sans", sans-serif;;
+            font-family: "DM Sans", sans-serif;
+            ;
         }
-        
+
         body {
             line-height: 1.6;
             color: #333;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -40,23 +43,26 @@
             cursor: pointer;
             font-size: 16px;
         }
-        
+
         .btn:hover {
             background-color: #029d72;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         section {
             padding: 80px 0;
         }
-        
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             line-height: 1.2;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
+
         /* Header Styles */
         header {
             background-color: white;
@@ -65,14 +71,14 @@
             top: 0;
             z-index: 1000;
         }
-        
+
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -81,32 +87,32 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo span {
             color: #ff3538;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
             transition: color 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: #53de62;
         }
-        
-        
+
+
         /* Hero Section */
         .hero {
             background: white;
@@ -114,41 +120,41 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-content {
             display: flex;
             align-items: center;
             justify-content: space-between;
             min-height: 600px;
         }
-        
+
         .hero-text {
             flex: 1;
             z-index: 1;
         }
-        
+
         .hero-image {
             flex: 1;
             text-align: right;
             z-index: 1;
         }
-        
+
         .hero-image img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             line-height: 1.2;
         }
-        
+
         .hero h1 span {
             color: #029d72;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
@@ -160,14 +166,14 @@
             background-color: #53de62;
             text-align: center;
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 60px;
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title:after {
             content: "";
             position: absolute;
@@ -178,14 +184,14 @@
             height: 4px;
             background-color: #ff3538;
         }
-        
+
         .features-container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-top: 50px;
         }
-        
+
         .feature-box {
             flex-basis: calc(33.333% - 30px);
             background-color: white;
@@ -195,120 +201,262 @@
             margin-bottom: 30px;
             transition: all 0.3s ease;
         }
-        
+
         .feature-box:hover {
             /* transform: translateY(-10px); */
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
-        
+
         .feature-icon {
             font-size: 3rem;
             color: #ff3538;
             margin-bottom: 20px;
         }
-        
+
         .feature-box h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
-        
+
         /* Courses Section */
-        .courses {
+        .courses{
             background-color: #061b2a;
         }
-        .section-title{
-            color: white;
+        #courses-title{
+            color: aliceblue;
         }
-        
-        .courses-container {
+
+        .flagship-course-card {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .flagship-course-card h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #554dd1;
+        }
+
+        .course-intro {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .inclusions {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 50px;
+            flex-direction: column;
+            gap: 30px;
         }
-        
-        .course-card {
-            flex-basis: calc(33.333% - 20px);
-            margin-bottom: 40px;
-            background-color: white;
-            border-radius: 10px;
+
+        .inclusion-block h4 {
+            color: #029d72;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .inclusion-block p,
+        .inclusion-block ul {
+            font-size: 1rem;
+            color: #444;
+            margin-left: 15px;
+        }
+
+        .inclusion-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .inclusion-block ul li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .inclusion-block ul li::before {
+            content: "✔️";
+            margin-right: 8px;
+            color: #10b981;
+        }
+
+        @media (max-width: 768px) {
+            .flagship-course-card {
+                padding: 25px;
+            }
+
+            .inclusions {
+                gap: 20px;
+            }
+        }
+
+
+        /* CTA Section */
+        .enhanced-cta {
+            background: linear-gradient(135deg, #2b2d89, #7c3aed);
+            color: #fff;
+            position: relative;
+            padding: 100px 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            text-align: center;
         }
-        
-        .course-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+        .cta-badge {
+            background: #ff3538;
+            color: #fff;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
         }
-        
-        .course-image {
-            width: 100%;
-            height: 200px;
-            background-color: #ddd;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .course-content {
-            padding: 20px;
-        }
-        
-        .course-title {
-            font-size: 1.3rem;
+
+        .cta-date {
+            font-size: 2.8rem;
+            background: linear-gradient(45deg, gold, orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
-        
-        .course-desc {
-            color: #666;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-        
-        .course-footer {
+
+        .cta-details {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            gap: 15px;
         }
-        
-        .course-price {
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            font-weight: 500;
+        }
+
+        .cta-price {
+            margin: 20px 0;
+            font-size: 1.8rem;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            margin-right: 10px;
+            color: #fbbf24;
+        }
+
+        .new-price {
+            color: #10b981;
             font-weight: bold;
-            color: #ff3538;
-            font-size: 1.2rem;
+            font-size: 2.2rem;
         }
-        
-        .course-btn {
-            padding: 8px 20px;
+
+        .discount-badge {
+            background: #ef4444;
+            color: #fff;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 6px;
+            font-size: 1rem;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .countdown-text {
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: #fcd34d;
+        }
+
+        .guarantee {
             font-size: 0.9rem;
+            margin-top: 10px;
+            color: #ddd;
         }
-        
-        /* CTA Section */
-        .cta {
-            background:#554dd1;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
         }
-        
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+
+        .shimmer-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+            animation: shimmer 2s infinite;
         }
-        
-        .cta p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
+
+        @keyframes shimmer {
+            0% {
+                left: -75%;
+            }
+
+            100% {
+                left: 125%;
+            }
         }
-        
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-price {
+                font-size: 1.4rem;
+            }
+
+            .new-price {
+                font-size: 1.8rem;
+            }
+        }
+
+
         /* Testimonials */
         .testimonials {
             background-color: #f5f4f6;
             text-align: center;
         }
-        .testimonials-heading{
+
+        .testimonials-heading {
             color: black;
         }
 
@@ -316,7 +464,7 @@
             max-width: 800px;
             margin: 50px auto 0;
         }
-        
+
         .testimonial {
             background-color: white;
             padding: 40px;
@@ -325,7 +473,7 @@
             text-align: left;
             position: relative;
         }
-        
+
         .testimonial:before {
             content: "\201C";
             font-size: 80px;
@@ -335,18 +483,18 @@
             color: #ff3538;
             opacity: 0.1;
         }
-        
+
         .testimonial-text {
             font-size: 1.1rem;
             font-style: italic;
             margin-bottom: 20px;
         }
-        
+
         .testimonial-author {
             display: flex;
             align-items: center;
         }
-        
+
         .author-image {
             width: 60px;
             height: 60px;
@@ -354,70 +502,71 @@
             overflow: hidden;
             margin-right: 15px;
         }
-        
+
         .author-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .author-info h4 {
             margin-bottom: 5px;
         }
-        
+
         .author-info p {
             color: #666;
             font-size: 0.9rem;
         }
-        
+
         /* About Section */
         .about {
             background-color: white;
         }
-        
+
         .about-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        
+
         .about-image {
             flex: 1;
             margin-right: 50px;
         }
-        
+
         .about-image img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-        
+
         .about-text {
             flex: 1;
         }
-        
+
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
         }
-        
+
         .about-text p {
             margin-bottom: 20px;
         }
-        
+
         /* Contact Section */
         .contact {
             background-color: #f9f9f9;
         }
-        .contact-title{
+
+        .contact-title {
             color: black;
         }
-        
+
         .contact-container {
             display: flex;
             justify-content: space-between;
         }
-        
+
         .contact-form {
             flex: 1;
             background-color: white;
@@ -426,17 +575,17 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             margin-right: 30px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
         }
-        
+
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -445,99 +594,99 @@
             border-radius: 5px;
             font-size: 16px;
         }
-        
+
         .form-group textarea {
             height: 150px;
             resize: vertical;
         }
-        
+
         .contact-info {
             flex: 1;
         }
-        
+
         .contact-info h3 {
             font-size: 1.8rem;
             margin-bottom: 25px;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 25px;
         }
-        
+
         .contact-icon {
             font-size: 1.5rem;
             color: #ff3538;
             margin-right: 15px;
             min-width: 25px;
         }
-        
+
         .contact-details h4 {
             margin-bottom: 5px;
         }
-        
+
         .contact-details p {
             color: #666;
         }
-        
+
         /* Social Proof */
         .social-proof {
             padding: 50px 0;
             background-color: white;
             text-align: center;
         }
-        
+
         .social-proof h3 {
             font-size: 1.5rem;
             color: #666;
             margin-bottom: 30px;
         }
-        
+
         .logos {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
         }
-        
+
         .logo-item {
             max-width: 150px;
             margin: 15px;
             opacity: 0.7;
             transition: opacity 0.3s ease;
         }
-        
+
         .logo-item:hover {
             opacity: 1;
         }
-        
+
         /* Footer */
         footer {
             background-color: #061b2a;
             color: #fff;
             padding: 60px 0 20px;
         }
-        
+
         .footer-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        
+
         .footer-col {
             flex: 1;
             min-width: 200px;
             margin-bottom: 30px;
         }
-        
+
         .footer-col h4 {
             color: #fff;
             font-size: 1.2rem;
             margin-bottom: 25px;
             position: relative;
         }
-        
+
         .footer-col h4:after {
             content: "";
             position: absolute;
@@ -547,30 +696,30 @@
             height: 3px;
             background-color: #ff3538;
         }
-        
+
         .footer-links {
             list-style: none;
         }
-        
+
         .footer-links li {
             margin-bottom: 15px;
         }
-        
+
         .footer-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: #ff3538;
         }
-        
+
         .social-links {
             display: flex;
             margin-top: 20px;
         }
-        
+
         .social-links a {
             display: inline-flex;
             align-items: center;
@@ -583,12 +732,12 @@
             margin-right: 10px;
             transition: all 0.3s ease;
         }
-        
+
         .social-links a:hover {
             background-color: #ff3538;
             transform: translateY(-5px);
         }
-        
+
         .copyright {
             text-align: center;
             padding-top: 30px;
@@ -597,70 +746,74 @@
             color: white;
             font-size: 0.9rem;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero-content {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .hero-text, .hero-image {
+
+            .hero-text,
+            .hero-image {
                 padding: 30px 0;
             }
-            
-            .feature-box, .course-card {
+
+            .feature-box,
+            .course-card {
                 flex-basis: calc(50% - 20px);
             }
-            
+
             .about-container {
                 flex-direction: column;
             }
-            
+
             .about-image {
                 margin-right: 0;
                 margin-bottom: 50px;
             }
-            
+
             .contact-container {
                 flex-direction: column;
             }
-            
+
             .contact-form {
                 margin-right: 0;
                 margin-bottom: 50px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
             }
-            
+
             .nav-links {
                 margin-top: 20px;
             }
-            
-            .feature-box, .course-card {
+
+            .feature-box,
+            .course-card {
                 flex-basis: 100%;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Course<span>Academy</span></a>
+                <a href="#" class="logo">commersify<span>360</span></a>
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#courses">Courses</a></li>
@@ -676,9 +829,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Master Your <span>Business Growth</span> in Record Time</h1>
-                    <p>Discover my proven 6-step formula to scale your business, increase profits, and achieve the freedom you deserve. Join over 10,000+ entrepreneurs who transformed their businesses.</p>
-                    <a href="#courses" class="btn">Explore Courses</a>
+                    <h1>Launch and <span>Grow</span> a <span>Profitable</span> Brand on Amazon in 2025 </h1>
+                    <p>Join India’s #1 Amazon Masterclass & Learn the Exact Blueprint to Scale from ₹0 to ₹50
+                        Lakhs/Month.💡 No Prior Experience Needed | No Technical Skills Required | Proven Step-by-Step
+                        Formula.</p>
+                    <a href="#courses" class="btn">Join Course</a>
                 </div>
                 <div class="hero-image">
                     <img src="/api/placeholder/500/600" alt="Course Instructor">
@@ -704,28 +859,55 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">The 3-Step Growth Framework</h2>
+            <h2 class="section-title">What You'll Learn</h2>
             <div class="features-container">
                 <div class="feature-box">
                     <div class="feature-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>Scale Your Business</h3>
-                    <p>Learn proven strategies to scale your business operations efficiently without burning out or losing quality.</p>
+                    <h3>Rapid Product Launch</h3>
+                    <p>Strategically launch your product to maximize visibility and attract early sales. A well-planned
+                        rollout increases long-term success.</p>
                 </div>
                 <div class="feature-box">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fa-solid fa-trophy"></i>
                     </div>
-                    <h3>Maximize Profits</h3>
-                    <p>Implement systems that increase your profit margins and create sustainable revenue streams for long-term growth.</p>
+                    <h3>Winning Selection Strategy</h3>
+                    <p>Select winning products by analyzing demand, competition, and profitability. Strong market
+                        research ensures consistent revenue.</p>
                 </div>
                 <div class="feature-box">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Gain Freedom</h3>
-                    <p>Build a business that works for you, not the other way around. Reclaim your time and enjoy true entrepreneurial freedom.</p>
+                    <h3>Organic & Paid Ranking</h3>
+                    <p>Boost rankings organically and with ads to reach more customers. Effective SEO and advertising
+                        strategies enhance visibility.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>High-Converting Listings</h3>
+                    <p>Create compelling listings that convert visitors into buyers. Optimized images, keywords, and
+                        descriptions make a big difference.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Profitable Amazon Ads</h3>
+                    <p>Master Amazon ads with step-by-step guidance to drive profitable campaigns. Targeting the right
+                        audience increases return on investment.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <h3>Avoid Seller Pitfalls</h3>
+                    <p>Avoid common seller mistakes that lead to lost revenue and slow growth. Learning from others’
+                        experiences helps prevent setbacks.</p>
                 </div>
             </div>
         </div>
@@ -734,61 +916,102 @@
     <!-- Courses Section -->
     <section class="courses" id="courses">
         <div class="container">
-            <h2 class="section-title">Featured Courses</h2>
-            <div class="courses-container">
-                <div class="course-card">
-                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Business Scaling Masterclass</h3>
-                        <p class="course-desc">Learn the complete system to scale your business to 7 figures with proven strategies and frameworks.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$997</span>
-                            <a href="course.html" class="btn course-btn">Learn More</a>
-                        </div>
+            <h2 class="section-title" id="courses-title">What You Get in This Program</h2>
+            <div class="flagship-course-card">
+                <h3>🚀 Amazon Launch Masterclass + FastTrack Course</h3>
+                <p class="course-intro">Everything you need to start, scale, and automate your Amazon business in one
+                    powerful program.</p>
+
+                <!-- <div class="inclusions">
+                    <div class="inclusion-block">
+                        <h4>🎓 Live Amazon Launch Masterclass</h4>
+                        <p>Get clarity, mindset shifts, and a battle-tested roadmap to build your brand from scratch.
+                        </p>
                     </div>
-                </div>
-                <div class="course-card">
-                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Profit Optimization Formula</h3>
-                        <p class="course-desc">Discover how to increase your profit margins by 2X while reducing operational costs and inefficiencies.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$797</span>
-                            <a href="course.html" class="btn course-btn">Learn More</a>
-                        </div>
+
+                    <div class="inclusion-block">
+                        <h4>💻 Amazon FastTrack Digital Course (Self-Paced)</h4>
+                        <ul>
+                            <li> Product Research</li>
+                            <li> Listing Creation</li>
+                            <li> Keyword & SEO Mastery</li>
+                            <li> Amazon Ads Made Easy</li>
+                            <li> Reviews & Ranking</li>
+                            <li> Order Management & Analytics</li>
+                            <li> Scaling & Automation</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="course-card">
-                    <div class="course-image" style="background-image: url('/api/placeholder/400/250')"></div>
-                    <div class="course-content">
-                        <h3 class="course-title">Team Performance Accelerator</h3>
-                        <p class="course-desc">Build and manage high-performing teams that drive business growth and innovation.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$597</span>
-                            <a href="course.html" class="btn course-btn">Learn More</a>
-                        </div>
+
+                    <div class="inclusion-block">
+                        <h4>🧰 Ready-to-Use Templates</h4>
+                        <ul>
+                            <li> Keyword Research Sheets</li>
+                            <li> Listing Copy Framework</li>
+                            <li> Ad Campaign Setup Sheets</li>
+                            <li> Profit Calculator</li>
+                        </ul>
                     </div>
-                </div>
+
+                    <div class="inclusion-block">
+                        <h4>📞 Bonus: Live Q&A + Community Access</h4>
+                        <p>Get unstuck with real-time Q&A and stay accountable with our exclusive WhatsApp group for
+                            action-takers.</p>
+                    </div>
+                </div> -->
+
+                <a href="course.html" class="btn shimmer-btn">Join Now</a>
             </div>
         </div>
     </section>
 
+
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta enhanced-cta">
         <div class="container">
-            <h2>Get Access to Your Free 40-Minute Training Now!</h2>
-            <p>Learn the fundamental strategies that successful entrepreneurs use to scale their businesses and increase profits in this free training.</p>
-            <a href="#" class="btn">Join Free Training</a>
+            <div class="cta-badge pulse">LIVE MASTERCLASS</div>
+            <h2>Join the Exclusive Live Masterclass!</h2>
+            <h1 class="cta-date">27 June</h1>
+            <p>🎁 Unlock the <strong>Amazon FastTrack Digital Course</strong> after attending. Step-by-step blueprint to
+                scale your business on Amazon!</p>
+
+            <div class="cta-details">
+                <div class="cta-card">
+                    <span>🕒 Time:</span> 7:00 PM
+                </div>
+                <div class="cta-card">
+                    <span>💻 Mode:</span> Zoom (Live + Q&A)
+                </div>
+                <div class="cta-card">
+                    <span>🎁 Bonus:</span> FastTrack Course Access
+                </div>
+            </div>
+
+            <div class="cta-price">
+                <span class="old-price">₹4,999</span>
+                <span class="new-price">₹499</span>
+                <span class="discount-badge bounce">90% OFF</span>
+            </div>
+
+            <p id="countdown" class="countdown-text">⏳ 48h 00m 00s Left</p>
+
+            <a href="course.html" class="btn shimmer-btn">Reserve My Seat</a>
+
+            <p class="guarantee">100% Money-back Guarantee if not satisfied</p>
         </div>
     </section>
+
+
+
 
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title testimonials-heading">What Our Students Say</h2>
+            <h2 class="section-title testimonials-heading">Proven Results from Real Sellers
+</h2>
             <div class="testimonial-container">
                 <div class="testimonial">
-                    <p class="testimonial-text">"Implementing just one strategy from this course helped me double my business revenue in just 3 months. The framework is simple yet incredibly effective."</p>
+                    <p class="testimonial-text">"Implementing just one strategy from this course helped me double my
+                        business revenue in just 3 months. The framework is simple yet incredibly effective."</p>
                     <div class="testimonial-author">
                         <div class="author-image">
                             <img src="/api/placeholder/100/100" alt="Testimonial Author">
@@ -812,9 +1035,12 @@
                 </div>
                 <div class="about-text">
                     <h2>About The Instructor</h2>
-                    <p>With over 15 years of experience in business growth and scaling, I've helped more than 500 businesses transform their operations and achieve exponential growth.</p>
-                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works across industries and business models.</p>
-                    <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build profitable businesses that also provide personal freedom.</p>
+                    <p>With over 15 years of experience in business growth and scaling, I've helped more than 500
+                        businesses transform their operations and achieve exponential growth.</p>
+                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works
+                        across industries and business models.</p>
+                    <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build
+                        profitable businesses that also provide personal freedom.</p>
                     <a href="#" class="btn">Learn More About Me</a>
                 </div>
             </div>
@@ -894,7 +1120,8 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h4>CourseAcademy</h4>
-                    <p>Empowering entrepreneurs with the knowledge and tools to build successful, profitable businesses.</p>
+                    <p>Empowering entrepreneurs with the knowledge and tools to build successful, profitable businesses.
+                    </p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -940,7 +1167,7 @@
 
     <script>
         // Simple script for navbar scrolling effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
                 header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
@@ -955,10 +1182,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -972,36 +1199,36 @@
         // Simple form validation
         const contactForm = document.querySelector('.contact-form');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 const nameInput = document.getElementById('name');
                 const emailInput = document.getElementById('email');
                 const messageInput = document.getElementById('message');
-                
+
                 let isValid = true;
-                
+
                 if (!nameInput.value.trim()) {
                     nameInput.style.borderColor = 'red';
                     isValid = false;
                 } else {
                     nameInput.style.borderColor = '#ddd';
                 }
-                
+
                 if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
                     emailInput.style.borderColor = 'red';
                     isValid = false;
                 } else {
                     emailInput.style.borderColor = '#ddd';
                 }
-                
+
                 if (!messageInput.value.trim()) {
                     messageInput.style.borderColor = 'red';
                     isValid = false;
                 } else {
                     messageInput.style.borderColor = '#ddd';
                 }
-                
+
                 if (isValid) {
                     // Here you would normally send the form data to your server
                     alert('Thank you for your message! We will get back to you soon.');
@@ -1016,62 +1243,57 @@
         let testimonialIndex = 0;
         const testimonials = [
             {
-                text: "Implementing just one strategy from this course helped me double my business revenue in just 3 months. The framework is simple yet incredibly effective.",
-                author: "Michael Johnson",
-                position: "CEO, Tech Solutions Inc.",
-                image: "/api/placeholder/100/100"
+                text: "“Followed just the launch module and did ₹4.2 Lakhs in our first 40 days!”",
+                author: "Aarti Mehra",
+                job:"Home Decor Brand"
+
             },
             {
                 text: "This course changed the way I approach my business. I've gone from working 70+ hours a week to just 25, while increasing profits by 40%.",
-                author: "Sarah Williams",
-                position: "Founder, Creative Marketing Agency",
-                image: "/api/placeholder/100/100"
+                author: "Prakash J.",
+                job:"Sports Accessories Seller"
             },
             {
                 text: "The strategies taught in this program are gold. My company valuation has increased by 3x since implementing the scaling framework.",
-                author: "David Chen",
-                position: "Co-founder, E-commerce Solutions",
-                image: "/api/placeholder/100/100"
+                author: "Sumeet Rathi",
+                job:"Ayurveda Brand Owner"
             }
         ];
 
         function showTestimonial(index) {
             const testimonialContainer = document.querySelector('.testimonial-container');
             if (!testimonialContainer) return;
-            
+
             const testimonial = testimonials[index];
-            
+
             testimonialContainer.innerHTML = `
                 <div class="testimonial">
                     <p class="testimonial-text">"${testimonial.text}"</p>
                     <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="${testimonial.image}" alt="${testimonial.author}">
-                        </div>
                         <div class="author-info">
                             <h4>${testimonial.author}</h4>
-                            <p>${testimonial.position}</p>
+                            <p>${testimonial.job}</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-dots">
-                    ${testimonials.map((_, i) => 
-                        `<span class="dot ${i === index ? 'active' : ''}" onclick="showTestimonial(${i})"></span>`
-                    ).join('')}
+                    ${testimonials.map((_, i) =>
+                `<span class="dot ${i === index ? 'active' : ''}" onclick="showTestimonial(${i})"></span>`
+            ).join('')}
                 </div>
             `;
         }
 
         // Initialize and set up testimonial rotation
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             showTestimonial(0);
-            
+
             // Auto-rotate testimonials every 5 seconds
             setInterval(() => {
                 testimonialIndex = (testimonialIndex + 1) % testimonials.length;
                 showTestimonial(testimonialIndex);
             }, 5000);
-            
+
             // Add testimonial dot styling
             const style = document.createElement('style');
             style.textContent = `
@@ -1101,21 +1323,21 @@
         function startCountdown() {
             const countdownEl = document.getElementById('countdown');
             if (!countdownEl) return;
-            
+
             // Set the countdown to 48 hours from now
             const countDownDate = new Date();
             countDownDate.setHours(countDownDate.getHours() + 48);
-            
-            const x = setInterval(function() {
+
+            const x = setInterval(function () {
                 const now = new Date().getTime();
                 const distance = countDownDate - now;
-                
+
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 countdownEl.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
-                
+
                 if (distance < 0) {
                     clearInterval(x);
                     countdownEl.innerHTML = "EXPIRED";
@@ -1124,9 +1346,10 @@
         }
 
         // Initialize countdown if element exists
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             startCountdown();
         });
     </script>
 </body>
+
 </html>
