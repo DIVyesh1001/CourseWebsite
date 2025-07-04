@@ -80,17 +80,14 @@
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
+            width: 150px;
+            height: 50px;
+            background-image: url('./comercify360Logocropped.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
-        .logo span {
-            color: #ff3538;
-        }
 
         .nav-links {
             display: flex;
@@ -172,6 +169,7 @@
             margin-bottom: 60px;
             position: relative;
             display: inline-block;
+            text-align: center;
         }
 
         .section-title:after {
@@ -219,11 +217,13 @@
         }
 
         /* Courses Section */
-        .courses{
+        .courses {
             background-color: #061b2a;
         }
-        #courses-title{
+
+        #courses-title {
             color: aliceblue;
+            text-align: center;
         }
 
         .flagship-course-card {
@@ -452,70 +452,121 @@
 
         /* Testimonials */
         .testimonials {
-            background-color: #f5f4f6;
+            background: linear-gradient(135deg, #f5f4f6 60%, #e0e7ff 100%);
             text-align: center;
+            padding: 100px 0 80px 0;
         }
 
         .testimonials-heading {
-            color: black;
+            color: #2b2d89;
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 1px;
         }
 
         .testimonial-container {
-            max-width: 800px;
-            margin: 50px auto 0;
-        }
-
-        .testimonial {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: left;
-            position: relative;
-        }
-
-        .testimonial:before {
-            content: "\201C";
-            font-size: 80px;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            color: #ff3538;
-            opacity: 0.1;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-author {
+            max-width: 700px;
+            margin: 0 auto;
             display: flex;
+            flex-direction: column;
             align-items: center;
         }
 
+        .testimonial {
+            background: #fff;
+            padding: 50px 40px 40px 40px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(43, 45, 137, 0.10), 0 1.5px 8px rgba(43, 45, 137, 0.08);
+            border-left: 6px solid #53de62;
+            margin-bottom: 30px;
+            position: relative;
+            transition: box-shadow 0.3s;
+        }
+        .testimonial:hover {
+            box-shadow: 0 16px 40px rgba(43, 45, 137, 0.18), 0 2px 12px rgba(43, 45, 137, 0.10);
+        }
+        .testimonial:before {
+            content: '\201C';
+            font-size: 70px;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            color: #53de62;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        .testimonial-text {
+            font-size: 1.35rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #222;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
         .author-image {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 15px;
+            margin-bottom: 10px;
+            border: 3px solid #53de62;
+            box-shadow: 0 2px 8px rgba(43, 45, 137, 0.08);
         }
-
         .author-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .author-info h4 {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
+            font-size: 1.1rem;
+            color: #2b2d89;
+            font-weight: 700;
         }
-
         .author-info p {
-            color: #666;
-            font-size: 0.9rem;
+            color: #53de62;
+            font-size: 0.98rem;
+            font-weight: 500;
+        }
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 18px;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 7px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 4px rgba(43, 45, 137, 0.08);
+        }
+        .dot.active {
+            background-color: #53de62;
+            transform: scale(1.2);
+        }
+        @media (max-width: 768px) {
+            .testimonial {
+                padding: 30px 10px 30px 10px;
+            }
+            .testimonials-heading {
+                font-size: 2rem;
+            }
+            .testimonial-text {
+                font-size: 1.05rem;
+            }
         }
 
         /* About Section */
@@ -535,9 +586,7 @@
         }
 
         .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 50%;
         }
 
         .about-text {
@@ -547,10 +596,12 @@
         .about-text h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
+            text-align: center;
         }
 
         .about-text p {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
         /* Contact Section */
@@ -803,6 +854,7 @@
 
             .section-title {
                 font-size: 2rem;
+                text-align: center;
             }
         }
     </style>
@@ -813,24 +865,23 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">commersify<span>360</span></a>
+                <div href="#" class="logo"></div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#courses">Course</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Launch and <span>Grow</span> a <span>Profitable</span> Brand on Amazon in 2025 </h1>
-                    <p>Join India’s #1 Amazon Masterclass & Learn the Exact Blueprint to Scale from ₹0 to ₹50
+                    <p>Join India's #1 Amazon Masterclass & Learn the Exact Blueprint to Scale from ₹0 to ₹50
                         Lakhs/Month. No Prior Experience Needed | No Technical Skills Required | Proven Step-by-Step
                         Formula.</p>
                     <a href="#courses" class="btn">Join Course</a>
@@ -842,19 +893,45 @@
         </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <!-- <section class="social-proof">
+    <!-- About The Instructor Section (moved up) -->
+    <section class="about" id="about">
         <div class="container">
-            <h3>Featured In</h3>
-            <div class="logos">
-                <img class="logo-item" src="/api/placeholder/150/50" alt="Forbes">
-                <img class="logo-item" src="/api/placeholder/150/50" alt="Business Insider">
-                <img class="logo-item" src="/api/placeholder/150/50" alt="Entrepreneur">
-                <img class="logo-item" src="/api/placeholder/150/50" alt="Inc.">
-                <img class="logo-item" src="/api/placeholder/150/50" alt="CNBC">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About The Instructor</h2>
+                    <p>With over 15 years of experience in business growth and scaling, I've helped more than 500
+                        businesses transform their operations and achieve exponential growth.</p>
+                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works
+                        across industries and business models.</p>
+                    <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build
+                        profitable businesses that also provide personal freedom.</p>
+                </div>
             </div>
         </div>
-    </section> -->
+    </section>
+
+    <!-- About Commercify360 Section (new) -->
+    <section class="about-commercify360" id="about-commercify360">
+        <div class="container" style="text-align:center;">
+            <h2>About Commercify360</h2>
+            <p>Commercify360 is India's leading Amazon brand accelerator, empowering entrepreneurs and businesses to
+                launch, grow, and scale their brands on Amazon. With a proven track record and a community of successful
+                sellers, Commercify360 provides the tools, strategies, and mentorship needed to win in the eCommerce
+                space.</p>
+            <div class="brand-logos"
+                style="display:flex;justify-content:center;align-items:center;gap:30px;margin:30px 0;flex-wrap:wrap;">
+                <img src="./adobe_brand_brands_logo_icon.png" alt="Brand 1" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./facebook_brand_fb_logo_icon.png" alt="Brand 2" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./firefox_logo_logos_icon.png" alt="Brand 3" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./instagram_brand_logo_icon.png" alt="Brand 4" class="logo-item" style="width: 100px; height: 100px;">
+            </div>
+            <div class="award-image" style="margin-top:30px;">
+                <h3>Amazon Award Winner 2023</h3>
+                <img src="./award_prize_star_trophy_icon.png" alt="Amazon Award 2023"
+                    style="width: 100px; height: 100px;">
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
@@ -906,7 +983,7 @@
                         <i class="fa-solid fa-circle-xmark"></i>
                     </div>
                     <h3>Avoid Seller Pitfalls</h3>
-                    <p>Avoid common seller mistakes that lead to lost revenue and slow growth. Learning from others’
+                    <p>Avoid common seller mistakes that lead to lost revenue and slow growth. Learning from others'
                         experiences helps prevent setbacks.</p>
                 </div>
             </div>
@@ -916,27 +993,29 @@
     <!-- Courses Section -->
     <section class="courses" id="courses">
         <div class="container">
-            <h2 class="section-title" id="courses-title">What You Get in This Program</h2>
+            <h2 class="section-title" id="courses-title" style="width: 100%;">What You Get in This Program</h2>
             <div class="flagship-course-card">
                 <h3>🚀 Amazon Launch Masterclass + FastTrack Course</h3>
                 <p class="course-intro">Everything you need to start, scale, and automate your Amazon business in one
-                    powerful program. <br> This course will equip you with everything you need to build a real, scalable business on Amazon.</p>
-                    
+                    powerful program. <br> This course will equip you with everything you need to build a real, scalable
+                    business on Amazon.</p>
+
                 <div class="inclusions">
                     <div class="inclusion-block">
-                        <h4> This IS for You If:</h4>
+                        <h4> This is for you if:</h4>
                         <ul>
-                            <li>You’re serious about creating a sustainable business</li>
-                            <li>You’re ready to implement step-by-step guidance</li>
+                            <li>You're serious about creating a sustainable business</li>
+                            <li>You're ready to implement step-by-step guidance</li>
                             <li>You want to turn your product idea into a fast-growing Amazon brand</li>
                         </ul>
                     </div>
                     <div class="inclusion-block">
-                        <h4>Whether You’re:</h4>
+                        <h4>Whether You're:</h4>
                         <ul>
                             <li>A beginner exploring eCommerce</li>
                             <li>A side hustler tired of 9–5</li>
-                            <li>A D2C brand looking to add Amazon as a channel Or a wholesaler/manufacturer ready to go direct-to-consumer</li>
+                            <li>A D2C brand looking to add Amazon as a channel Or a wholesaler/manufacturer ready to go
+                                direct-to-consumer</li>
                         </ul>
                     </div>
                     <div class="inclusion-block">
@@ -1010,8 +1089,8 @@
             </div>
 
             <div class="cta-price">
-                <span class="old-price">₹4,999</span>
-                <span class="new-price">₹499</span>
+                <span class="old-price">₹9,999</span>
+                <span class="new-price">₹999</span>
                 <span class="discount-badge bounce">90% OFF</span>
             </div>
 
@@ -1029,12 +1108,10 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title testimonials-heading">Proven Results from Real Sellers
-</h2>
+            <h2 class="section-title testimonials-heading">Proven Results from Real Sellers</h2>
             <div class="testimonial-container">
                 <div class="testimonial">
-                    <p class="testimonial-text">"Implementing just one strategy from this course helped me double my
-                        business revenue in just 3 months. The framework is simple yet incredibly effective."</p>
+                    <div class="testimonial-text">"Implementing just one strategy from this course helped me double my business revenue in just 3 months. The framework is simple yet incredibly effective."</div>
                     <div class="testimonial-author">
                         <div class="author-image">
                             <img src="/api/placeholder/100/100" alt="Testimonial Author">
@@ -1049,141 +1126,40 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="/api/placeholder/500/600" alt="About Us">
-                </div>
-                <div class="about-text">
-                    <h2>About The Instructor</h2>
-                    <p>With over 15 years of experience in business growth and scaling, I've helped more than 500
-                        businesses transform their operations and achieve exponential growth.</p>
-                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works
-                        across industries and business models.</p>
-                    <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build
-                        profitable businesses that also provide personal freedom.</p>
-                    <a href="#" class="btn">Learn More About Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="contact-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="Enter subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Enter your message"></textarea>
-                    </div>
-                    <button class="btn">Send Message</button>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Address</h4>
-                            <p>123 Business Avenue, Suite 500, San Francisco, CA 94107</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>info@courseacademy.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 9AM - 5PM (PST)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h4>CourseAcademy</h4>
-                    <p>Empowering entrepreneurs with the knowledge and tools to build successful, profitable businesses.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+            <div class="footer-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 30px;">
+                <div class="footer-col" style="flex: 1; min-width: 220px; display: flex; flex-direction: column; align-items: flex-start;">
+                    <div class="logo" style="width: 150px; height: 50px; background-image: url('./comercify360Logocropped.png'); background-size: contain; background-repeat: no-repeat; background-position: left;"></div>
+                    <p style="margin: 18px 0 0 0; color: #cbd5e1; font-size: 1.05rem;">Empowering Amazon entrepreneurs to launch, grow, and scale successful brands.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Courses</h4>
+                <div class="footer-col" style="flex: 1; min-width: 180px;">
+                    <h4>Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Business Scaling</a></li>
-                        <li><a href="#">Profit Optimization</a></li>
-                        <li><a href="#">Team Performance</a></li>
-                        <li><a href="#">Marketing Mastery</a></li>
-                        <li><a href="#">Sales Systems</a></li>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
+                <div class="footer-col" style="flex: 1; min-width: 220px;">
                     <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for business tips and growth strategies.</p>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your email address">
+                    <p style="color: #cbd5e1;">Subscribe for Amazon growth tips and updates.</p>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 10px 12px; border-radius: 6px; border: none; margin-bottom: 10px;">
                     </div>
-                    <button class="btn">Subscribe</button>
+                    <button class="btn" style="width: 100%;">Subscribe</button>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 CourseAcademy. All rights reserved.</p>
+            <div class="copyright" style="text-align: center; padding-top: 30px; border-top: 1px solid #334155; margin-top: 30px; color: #cbd5e1; font-size: 0.98rem;">
+                <p>&copy; 2025 Commercify360. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1268,18 +1244,18 @@
             {
                 text: "“Followed just the launch module and did ₹4.2 Lakhs in our first 40 days!”",
                 author: "Aarti Mehra",
-                job:"Home Decor Brand"
+                job: "Home Decor Brand"
 
             },
             {
                 text: "This course changed the way I approach my business. I've gone from working 70+ hours a week to just 25, while increasing profits by 40%.",
                 author: "Prakash J.",
-                job:"Sports Accessories Seller"
+                job: "Sports Accessories Seller"
             },
             {
                 text: "The strategies taught in this program are gold. My company valuation has increased by 3x since implementing the scaling framework.",
                 author: "Sumeet Rathi",
-                job:"Ayurveda Brand Owner"
+                job: "Ayurveda Brand Owner"
             }
         ];
 
