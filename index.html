@@ -137,9 +137,8 @@
         }
 
         .hero-image img {
-            max-width: 100%;
+            max-width: 80%;
             border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .hero h1 {
@@ -601,7 +600,6 @@
 
         .about-text p {
             margin-bottom: 10px;
-            text-align: center;
         }
 
         /* Contact Section */
@@ -870,6 +868,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#courses">Course</a></li>
+                    <li><a href="#faq">FAQs</a></li>
                 </ul>
             </nav>
         </div>
@@ -887,7 +886,7 @@
                     <a href="#courses" class="btn">Join Course</a>
                 </div>
                 <div class="hero-image">
-                    <img src="/api/placeholder/500/600" alt="Course Instructor">
+                    <img src="./amazon-logo.png" alt="Course Instructor">
                 </div>
             </div>
         </div>
@@ -896,13 +895,17 @@
     <!-- About The Instructor Section (moved up) -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-container">
-                <div class="about-text">
+            <div class="about-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                <div class="about-image" style="flex: 1; min-width: 220px; text-align: center;">
+                    <img src="./businesswoman.png" alt="Instructor Photo" style="width: 100%; ">
+                </div>
+                <div class="about-text" style="flex: 2; min-width: 260px;">
                     <h2>About The Instructor</h2>
                     <p>With over 15 years of experience in business growth and scaling, I've helped more than 500
-                        businesses transform their operations and achieve exponential growth.</p>
-                    <p>After successfully scaling multiple 7-figure businesses, I've developed a framework that works
-                        across industries and business models.</p>
+                        businesses transform their operations and achieve exponential growth.
+                    After successfully scaling multiple 7-figure businesses, I've developed a framework that works
+                        across industries and business models.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum accusantium quo ex libero excepturi optio dicta ut! Veniam officia recusandae sed culpa facere eligendi iure eos enim rem nemo aspernatur illo deleniti aliquid dolore in suscipit ducimus inventore cupiditate, nihil quas facilis nobis unde animi! Doloribus tenetur officiis rerum impedit!</p>
                     <p>My mission is to empower entrepreneurs with the strategies, tools, and mindset needed to build
                         profitable businesses that also provide personal freedom.</p>
                 </div>
@@ -910,29 +913,7 @@
         </div>
     </section>
 
-    <!-- About Commercify360 Section (new) -->
-    <section class="about-commercify360" id="about-commercify360">
-        <div class="container" style="text-align:center;">
-            <h2>About Commercify360</h2>
-            <p>Commercify360 is India's leading Amazon brand accelerator, empowering entrepreneurs and businesses to
-                launch, grow, and scale their brands on Amazon. With a proven track record and a community of successful
-                sellers, Commercify360 provides the tools, strategies, and mentorship needed to win in the eCommerce
-                space.</p>
-            <div class="brand-logos"
-                style="display:flex;justify-content:center;align-items:center;gap:30px;margin:30px 0;flex-wrap:wrap;">
-                <img src="./adobe_brand_brands_logo_icon.png" alt="Brand 1" class="logo-item" style="width: 100px; height: 100px;">
-                <img src="./facebook_brand_fb_logo_icon.png" alt="Brand 2" class="logo-item" style="width: 100px; height: 100px;">
-                <img src="./firefox_logo_logos_icon.png" alt="Brand 3" class="logo-item" style="width: 100px; height: 100px;">
-                <img src="./instagram_brand_logo_icon.png" alt="Brand 4" class="logo-item" style="width: 100px; height: 100px;">
-            </div>
-            <div class="award-image" style="margin-top:30px;">
-                <h3>Amazon Award Winner 2023</h3>
-                <img src="./award_prize_star_trophy_icon.png" alt="Amazon Award 2023"
-                    style="width: 100px; height: 100px;">
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
@@ -969,7 +950,7 @@
                     <h3>High-Converting Listings</h3>
                     <p>Create compelling listings that convert visitors into buyers. Optimized images, keywords, and
                         descriptions make a big difference.</p>
-                </div>
+                    </div>
                 <div class="feature-box">
                     <div class="feature-icon">
                         <i class="fas fa-chart-line"></i>
@@ -977,7 +958,7 @@
                     <h3>Profitable Amazon Ads</h3>
                     <p>Master Amazon ads with step-by-step guidance to drive profitable campaigns. Targeting the right
                         audience increases return on investment.</p>
-                </div>
+                    </div>
                 <div class="feature-box">
                     <div class="feature-icon">
                         <i class="fa-solid fa-circle-xmark"></i>
@@ -985,7 +966,7 @@
                     <h3>Avoid Seller Pitfalls</h3>
                     <p>Avoid common seller mistakes that lead to lost revenue and slow growth. Learning from others'
                         experiences helps prevent setbacks.</p>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -1000,8 +981,8 @@
                     powerful program. <br> This course will equip you with everything you need to build a real, scalable
                     business on Amazon.</p>
 
-                <div class="inclusions">
-                    <div class="inclusion-block">
+                    <div class="inclusions">
+                        <div class="inclusion-block">
                         <h4> This is for you if:</h4>
                         <ul>
                             <li>You're serious about creating a sustainable business</li>
@@ -1029,37 +1010,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="inclusions">
-
-                    <div class="inclusion-block">
-                        <h4>💻 Amazon FastTrack Digital Course (Self-Paced)</h4>
-                        <ul>
-                            <li> Product Research</li>
-                            <li> Listing Creation</li>
-                            <li> Keyword & SEO Mastery</li>
-                            <li> Amazon Ads Made Easy</li>
-                            <li> Reviews & Ranking</li>
-                            <li> Order Management & Analytics</li>
-                            <li> Scaling & Automation</li>
-                        </ul>
-                    </div>
-
-                    <div class="inclusion-block">
-                        <h4>🧰 Ready-to-Use Templates</h4>
-                        <ul>
-                            <li> Keyword Research Sheets</li>
-                            <li> Listing Copy Framework</li>
-                            <li> Ad Campaign Setup Sheets</li>
-                            <li> Profit Calculator</li>
-                        </ul>
-                    </div>
-
-                    <div class="inclusion-block">
-                        <h4>📞 Bonus: Live Q&A + Community Access</h4>
-                        <p>Get unstuck with real-time Q&A and stay accountable with our exclusive WhatsApp group for
-                            action-takers.</p>
-                    </div>
-                </div> -->
+               
                 <br>
                 <a href="course.html" class="btn shimmer-btn">Join Now</a>
             </div>
@@ -1075,9 +1026,9 @@
             <h1 class="cta-date">27 June</h1>
             <p>🎁 Unlock the <strong>Amazon FastTrack Digital Course</strong> after attending. Step-by-step blueprint to
                 scale your business on Amazon!</p>
-
-            <div class="cta-details">
-                <div class="cta-card">
+                
+                <div class="cta-details">
+                    <div class="cta-card">
                     <span>🕒 Time:</span> 7:00 PM
                 </div>
                 <div class="cta-card">
@@ -1097,14 +1048,14 @@
             <p id="countdown" class="countdown-text">⏳ 48h 00m 00s Left</p>
 
             <a href="course.html" class="btn shimmer-btn">Reserve My Seat</a>
-
+            
             <p class="guarantee">100% Money-back Guarantee if not satisfied</p>
         </div>
     </section>
 
 
 
-
+    
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
@@ -1125,7 +1076,106 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- Brand Trust Section -->
+    <section class="brand-trust" style="background: #41db6c; padding: 70px 0 40px 0;">
+        <div class="container" style="max-width: 1200px;">
+            <h2 style="text-align:center; color:#1a1a1a; font-size:2rem; font-weight:600; margin-bottom:40px;">Trusted by nearly 200+ paying customers</h2>
+            <div class="brand-logo-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 28px;">
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="aastey" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Alpino" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="amante" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="AZANI" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Godrej" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Nykaa" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="New " style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Milton" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sirona" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sugar" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Timber" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="aastey" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Alpino" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="amante" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="AZANI" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Godrej" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Nykaa" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="New " style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Milton" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sirona" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sugar" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Timber" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="aastey" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Alpino" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="amante" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="AZANI" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Godrej" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Nykaa" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="New " style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Milton" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sirona" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Sugar" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="Timber" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                <div style="background: #fff; border-radius: 5px; padding: 18px 28px; display: flex; align-items: center; justify-content: center; min-width: 120px; min-height: 60px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);"><img src="./facebook_brand_fb_logo_icon.png" alt="XP Pen" style="max-width: 100px; max-height: 40px;"></div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq" id="faq" style="background: #f5f4f6; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;width: 100%;">Frequently Asked Questions</h2>
+            <div class="faq-list" style="max-width: 800px; margin: 40px auto 0 auto;">
+                <div class="faq-item" style="margin-bottom: 32px;">
+                    <h4 style="color: #2b2d89; margin-bottom: 10px;">1. Who is this course for?</h4>
+                    <p style="color: #444;">This course is designed for beginners, side hustlers, D2C brands, wholesalers, and anyone looking to launch or scale a profitable Amazon business, regardless of prior experience.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 32px;">
+                    <h4 style="color: #2b2d89; margin-bottom: 10px;">2. Will I get lifetime access to the course materials?</h4>
+                    <p style="color: #444;">Yes! Once you enroll, you get lifetime access to all course materials, updates, and bonus resources so you can learn at your own pace and revisit content anytime.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 32px;">
+                    <h4 style="color: #2b2d89; margin-bottom: 10px;">3. Is there a money-back guarantee?</h4>
+                    <p style="color: #444;">Absolutely. If you're not satisfied with the course, we offer a 100% money-back guarantee within 7 days of purchase. Your satisfaction is our priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Commercify360 Section (new) -->
+    <section class="about-commercify360" id="about-commercify360">
+        <div class="container" style="text-align:center;">
+            <h2>About Commercify360</h2>
+            <p>Commercify360 is India's leading Amazon brand accelerator, empowering entrepreneurs and businesses to
+                launch, grow, and scale their brands on Amazon. With a proven track record and a community of successful
+                sellers, Commercify360 provides the tools, strategies, and mentorship needed to win in the eCommerce
+                space.</p>
+            <div class="brand-logos"
+                style="display:flex;justify-content:center;align-items:center;gap:30px;margin:30px 0;flex-wrap:wrap;">
+                <img src="./adobe_brand_brands_logo_icon.png" alt="Brand 1" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./facebook_brand_fb_logo_icon.png" alt="Brand 2" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./firefox_logo_logos_icon.png" alt="Brand 3" class="logo-item" style="width: 100px; height: 100px;">
+                <img src="./instagram_brand_logo_icon.png" alt="Brand 4" class="logo-item" style="width: 100px; height: 100px;">
+            </div>
+            <div class="award-image" style="margin-top:30px;">
+                <h3>Amazon Award Winner 2023</h3>
+                <img src="./award_prize_star_trophy_icon.png" alt="Amazon Award 2023"
+                    style="width: 100px; height: 100px;">
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1146,7 +1196,7 @@
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#courses">Courses</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-col" style="flex: 1; min-width: 220px;">
